@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MUCORE — Next-Generation Technology. We just launched. AI, Cybersecurity, Cloud & More." />
+  <title>MUCORE — Next-Generation Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <img src="./MuCore_logo.png" alt="MUCORE" class="loader-logo" />
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <span class="loader-text">Initializing MUCORE</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <img src="./MuCore_logo.png" alt="MUCORE" class="nav-logo-img" />
+        <span class="nav-brand-name">MUCORE</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#technologies" class="nav-link">Technology</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li><a href="#careers" class="nav-link">Careers</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-bg-lines"></div>
+
+    <div class="hero-content">
+      <div class="launch-badge reveal">
+        <span class="launch-dot"></span>
+        Just Launched · Day 1
+      </div>
+      <h1 class="hero-title reveal">
+        We just started.<br />
+        <span class="hero-red">Watch us build.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        MUCORE is a next-generation technology company born to engineer intelligent systems —
+        AI, cybersecurity, cloud, and software built to enterprise standards from day one.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#technologies" class="btn btn-primary">Explore What We Build</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="hero-scroll reveal">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+
+    <!-- Big logo watermark right side -->
+    <div class="hero-emblem">
+      <img src="./MuCore_logo.png" alt="MUCORE" class="hero-emblem-img" aria-hidden="true" />
+      <div class="emblem-ring emblem-ring-1"></div>
+      <div class="emblem-ring emblem-ring-2"></div>
+      <div class="emblem-ring emblem-ring-3"></div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══════════════════════════════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <span class="eyebrow">Day One</span>
+          <h2 class="section-title">Born to build.<br/>Not to wait.</h2>
+          <p>MUCORE launched this week. We are a small but sharp team of engineers and architects who spent years building technology for others — and decided it was time to build our own company.</p>
+          <p>We don't have years of history. We have clarity of purpose: engineer systems that are intelligent, secure, and built to last.</p>
+          <div class="about-signature">
+            <img src="./MuCore_logo.png" alt="MUCORE" class="sig-logo" />
+            <div>
+              <div class="sig-name">MUCORE</div>
+              <div class="sig-sub">Next-Generation Technology</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="about-card glass reveal" data-delay="0">
+            <div class="about-icon red-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Our Mission</h3>
+            <p>Engineer intelligent, secure, and scalable technology that lets businesses operate at the speed of the future.</p>
+          </div>
+          <div class="about-card glass reveal" data-delay="120">
+            <div class="about-icon red-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s.9 4 5 4 5-4 5-4 .9 4 5 4 5-4 5-4"/><path d="M1 18s.9-4 5-4 5 4 5 4 .9-4 5-4 5 4 5 4"/></svg>
+            </div>
+            <h3>Our Vision</h3>
+            <p>A world where every company — startup or enterprise — runs on a foundation that is AI-native, resilient, and future-ready.</p>
+          </div>
+          <div class="about-card glass reveal" data-delay="240">
+            <div class="about-icon red-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Our Team</h3>
+            <p>A founding team of engineers and strategists united by one goal — building technology that genuinely matters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TECHNOLOGIES ══════════════════════════════════════ -->
+  <section class="section technologies" id="technologies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What We Build</span>
+        <h2 class="section-title">Six pillars. Infinite scope.</h2>
+        <p class="section-sub">From day one, we are engineering across the full stack of modern technology.</p>
+      </div>
+      <div class="tech-grid">
+
+        <div class="tech-card glass reveal" data-delay="0">
+          <div class="tech-glow"></div>
+          <div class="tech-num">01</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 0 6h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1 0-6h1V6a4 4 0 0 1 4-4z"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Artificial Intelligence</h3>
+          <p>ML pipelines, LLM integration, computer vision, and predictive analytics built for production environments.</p>
+        </div>
+
+        <div class="tech-card glass reveal" data-delay="80">
+          <div class="tech-glow"></div>
+          <div class="tech-num">02</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Cybersecurity</h3>
+          <p>Zero-trust architecture, threat intelligence, penetration testing, and compliance automation.</p>
+        </div>
+
+        <div class="tech-card glass reveal" data-delay="160">
+          <div class="tech-glow"></div>
+          <div class="tech-num">03</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Cloud Computing</h3>
+          <p>Multi-cloud orchestration, Kubernetes-native platforms, serverless, and FinOps optimization.</p>
+        </div>
+
+        <div class="tech-card glass reveal" data-delay="0">
+          <div class="tech-glow"></div>
+          <div class="tech-num">04</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>SaaS Platforms</h3>
+          <p>End-to-end product engineering — architecture, multi-tenant infrastructure, and revenue operations.</p>
+        </div>
+
+        <div class="tech-card glass reveal" data-delay="80">
+          <div class="tech-glow"></div>
+          <div class="tech-num">05</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><path d="M8 6h8M8 10h8M8 14h4"/></svg>
+          </div>
+          <h3>IoT Systems</h3>
+          <p>Connected device ecosystems, real-time edge processing, and industrial IoT integration.</p>
+        </div>
+
+        <div class="tech-card glass reveal" data-delay="160">
+          <div class="tech-glow"></div>
+          <div class="tech-num">06</div>
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Software Engineering</h3>
+          <p>High-performance backends, API platforms, developer tooling, and distributed systems at any scale.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ══════════════════════════════════════════ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Here's what we can do<br/>for you, right now.</h2>
+      </div>
+      <div class="services-list">
+
+        <div class="service-row reveal" data-delay="0">
+          <div class="sr-left">
+            <span class="sr-num">01</span>
+            <h3>AI Strategy & Integration</h3>
+          </div>
+          <p class="sr-desc">We help you find where AI changes your workflow, then build and deploy it into production — not a prototype.</p>
+          <a href="#contact" class="sr-link">Talk to us →</a>
+        </div>
+
+        <div class="service-row reveal" data-delay="60">
+          <div class="sr-left">
+            <span class="sr-num">02</span>
+            <h3>Cloud Architecture</h3>
+          </div>
+          <p class="sr-desc">Multi-cloud design, migration, infrastructure-as-code, and cost optimization for companies at any stage.</p>
+          <a href="#contact" class="sr-link">Talk to us →</a>
+        </div>
+
+        <div class="service-row reveal" data-delay="120">
+          <div class="sr-left">
+            <span class="sr-num">03</span>
+            <h3>Security Operations</h3>
+          </div>
+          <p class="sr-desc">Continuous threat monitoring, compliance automation, red team assessments, and zero-trust implementation.</p>
+          <a href="#contact" class="sr-link">Talk to us →</a>
+        </div>
+
+        <div class="service-row reveal" data-delay="180">
+          <div class="sr-left">
+            <span class="sr-num">04</span>
+            <h3>Product Engineering</h3>
+          </div>
+          <p class="sr-desc">Full-cycle SaaS product development — backend, API, frontend, QA. From architecture to deployment.</p>
+          <a href="#contact" class="sr-link">Talk to us →</a>
+        </div>
+
+        <div class="service-row reveal" data-delay="240">
+          <div class="sr-left">
+            <span class="sr-num">05</span>
+            <h3>IoT & Automation</h3>
+          </div>
+          <p class="sr-desc">Device connectivity, edge AI, industrial automation, and intelligent monitoring systems.</p>
+          <a href="#contact" class="sr-link">Talk to us →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ROADMAP ════════════════════════════════════════════ -->
+  <section class="section roadmap" id="roadmap">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Our Roadmap</span>
+        <h2 class="section-title">We just started.<br/>Here is where we go.</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item reveal active" data-delay="0">
+          <div class="tl-marker active"></div>
+          <div class="tl-body glass">
+            <div class="tl-tag now">Now · 2025</div>
+            <h3>Foundation</h3>
+            <p>MUCORE launches. Core team assembled. First client conversations underway. Technology stack defined. Website live.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-delay="100">
+          <div class="tl-marker"></div>
+          <div class="tl-body glass">
+            <div class="tl-tag">Q3 2025</div>
+            <h3>First Clients</h3>
+            <p>Onboard our first 5 enterprise clients. Launch AI and Cloud practice areas. Grow team to 10 engineers.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-delay="200">
+          <div class="tl-marker"></div>
+          <div class="tl-body glass">
+            <div class="tl-tag">Q4 2025</div>
+            <h3>First Product</h3>
+            <p>Ship MUCORE's first SaaS product — an AI-native security monitoring platform for growing companies.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-delay="300">
+          <div class="tl-marker future"></div>
+          <div class="tl-body glass">
+            <div class="tl-tag future-tag">2026</div>
+            <h3>Scale</h3>
+            <p>50+ clients. Three delivery centers. MUCORE OS — an AI-native enterprise operating platform — goes into beta.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CAREERS ════════════════════════════════════════════ -->
+  <section class="section careers" id="careers">
+    <div class="container">
+      <div class="careers-block glass reveal">
+        <div class="careers-logo-bg" aria-hidden="true">
+          <img src="./MuCore_logo.png" alt="MUCORE" />
+        </div>
+        <div class="careers-text">
+          <span class="eyebrow">Join Us</span>
+          <h2>We're hiring our<br/>founding team.</h2>
+          <p>We just launched. That means the people who join now will shape how MUCORE thinks, builds, and grows. If you want to build something from zero, this is the place.</p>
+          <div class="careers-roles">
+            <span class="role-tag">AI / ML Engineer</span>
+            <span class="role-tag">Cloud Architect</span>
+            <span class="role-tag">Security Analyst</span>
+            <span class="role-tag">Full-Stack Engineer</span>
+            <span class="role-tag">IoT Developer</span>
+            <span class="role-tag">DevOps Engineer</span>
+          </div>
+          <a href="#contact" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ════════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title">Let's talk about<br/>what you're building.</h2>
+          <p>We just launched, but we're ready to work. Whether you need a technology partner, want to join the team, or just want to learn more — reach out.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-val">hello@mucore.io</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Location</div>
+                <div class="ci-val">India · Remote-First</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" name="name" placeholder="Your name" autocomplete="name" />
+            <span class="form-error" id="nameErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" name="email" placeholder="you@company.com" autocomplete="email" />
+            <span class="form-error" id="emailErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="cSubject">What's this about?</label>
+            <input type="text" id="cSubject" name="subject" placeholder="Hire us / Join us / Just curious" />
+          </div>
+          <div class="form-group">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" name="message" rows="5" placeholder="Tell us what you're building or thinking..."></textarea>
+            <span class="form-error" id="msgErr"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Send Message
+            <span id="formSpinner" class="btn-spinner hidden"></span>
+          </button>
+          <div class="form-success hidden" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Sent! We'll reply within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">
+            <img src="././MuCore_logo.png" alt="MUCORE" class="nav-logo-img" />
+            <span class="nav-brand-name">MUCORE</span>
+          </a>
+          <p>Core of Modern Technology.<br/>Just launched. Building everything.</p>
+          <div class="footer-social">
+            <a href="#" class="soc" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="soc" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="soc" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#technologies">Technology</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">AI Integration</a></li>
+            <li><a href="#services">Cloud Architecture</a></li>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">Product Engineering</a></li>
+            <li><a href="#services">IoT & Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#careers">Join the Team</a></li>
+            <li><a href="#contact">hello@mucore.io</a></li>
+          </ul>
+          <div class="footer-launch-badge">
+            <span class="launch-dot"></span>
+            Launched June 2025
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 MUCORE Technologies. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
