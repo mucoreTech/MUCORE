@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mucore.in/sitemap.xml
+Sitemap: https://mucore.in/sitemap.xml
