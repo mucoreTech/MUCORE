@@ -283,17 +283,29 @@
 
 /* ── Contact Form Validation ────────────────────────────── */
 (function initContactForm() {
-  const form    = document.getElementById('contactForm');
+  const form     = document.getElementById('contactForm');
   if (!form) return;
+const name     = document.getElementById('cName');       // was contactName
+const email    = document.getElementById('cEmail');      // was contactEmail
+const msg      = document.getElementById('cMsg');        // was contactMessage
+const nameErr  = document.getElementById('nameErr');     // was nameError
+const emailErr = document.getElementById('emailErr');    // was emailError
+const msgErr   = document.getElementById('msgErr');      // was messageError
+const success  = document.getElementById('formSuccess');
+const spinner = document.getElementById('formSpinner');
 
-  const name    = document.getElementById('contactName');
-  const email   = document.getElementById('contactEmail');
-  const msg     = document.getElementById('contactMessage');
-  const nameErr = document.getElementById('nameError');
-  const emailErr= document.getElementById('emailError');
-  const msgErr  = document.getElementById('messageError');
-  const success = document.getElementById('formSuccess');
-  const spinner = document.getElementById('formSpinner');
+  console.log('form:', form);
+  console.log('name:', name);
+  console.log('email:', email);
+  console.log('msg:', msg);
+  console.log('nameErr:', nameErr);
+  console.log('emailErr:', emailErr);
+  console.log('msgErr:', msgErr);
+  console.log('success:', success);
+  console.log('spinner:', spinner);
+
+  // ✅ Paste your Apps Script Web App URL here
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyF2ZhnLnyueIFFhc1Mp-rqo0rcsorlbg4_N5uB1N4oTt15baKFKH4bpWKxWUMjHuwm/exec';
 
   function validate(field, errEl, condition, message) {
     if (!condition) {
@@ -307,28 +319,45 @@
   }
 
   // Live clear
-  [name, email, msg].forEach(f => f.addEventListener('input', () => f.classList.remove('error')));
+  [name, email, msg].forEach(f =>
+    f.addEventListener('input', () => f.classList.remove('error'))
+  );
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const v1 = validate(name,  nameErr,  name.value.trim().length >= 2,         'Please enter your name.');
-    const v2 = validate(email, emailErr, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()), 'Enter a valid email address.');
-    const v3 = validate(msg,   msgErr,   msg.value.trim().length >= 10,         'Message must be at least 10 characters.');
 
+    const v1 = validate(name,  nameErr,  name.value.trim().length >= 2,                          'Please enter your name.');
+    const v2 = validate(email, emailErr, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()), 'Enter a valid email address.');
+    const v3 = validate(msg,   msgErr,   msg.value.trim().length >= 10,                          'Message must be at least 10 characters.');
     if (!(v1 && v2 && v3)) return;
 
-    // Simulate submission
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
     spinner.classList.remove('hidden');
 
-    setTimeout(() => {
-      spinner.classList.add('hidden');
-      btn.disabled = false;
+    try {
+      const response = await fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors', // ⚠️ Required for Apps Script
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    name.value.trim(),
+          email:   email.value.trim(),
+          message: msg.value.trim()
+        })
+      });
+
       form.reset();
       success.classList.remove('hidden');
       setTimeout(() => success.classList.add('hidden'), 5000);
-    }, 1800);
+
+    } catch (err) {
+      alert('Something went wrong. Please try again.');
+      console.error('Submission error:', err);
+    } finally {
+      spinner.classList.add('hidden');
+      btn.disabled = false;
+    }
   });
 })();
 

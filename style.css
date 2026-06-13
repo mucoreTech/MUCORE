@@ -199,7 +199,6 @@ button{cursor:pointer;border:none;background:none}
 }
 .hero-emblem-img{
   width:200px;height:200px;object-fit:contain;
-  opacity:.18;
   filter:drop-shadow(0 0 40px var(--red-glow)) drop-shadow(0 0 80px rgba(204,17,17,.2));
   animation:emblem-float 6s ease-in-out infinite;
 }
@@ -442,6 +441,11 @@ button{cursor:pointer;border:none;background:none}
   .hero{padding:120px 24px 60px}
   .hero-title{letter-spacing:-1px}
 }
+
+.hidden {
+  display: none !important;
+}
+
 @media(max-width:480px){
   .hero-actions{flex-direction:column}
   .btn{justify-content:center}
